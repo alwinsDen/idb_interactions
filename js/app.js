@@ -5,8 +5,8 @@ window.addEventListener("load",()=> {
   let startPos = null;
   function eventBalancer(stringName,event) {
     const bbdBox = mobileRef.getBoundingClientRect();
-    const scaleX  = 1179 / mobileRef.clientWidth;
-    const scaleY = 2556 / mobileRef.clientHeight;
+    const scaleX  = 393 / mobileRef.clientWidth;
+    const scaleY = 852 / mobileRef.clientHeight;
     let x = (event.clientX - bbdBox.left)*scaleX;
     let y = (event.clientY - bbdBox.top)*scaleY;
     return {x, y}
@@ -20,7 +20,7 @@ window.addEventListener("load",()=> {
     let endTime = Date.now();
     if ((endTime - startTime) < 200) {
       const pressEvent = eventBalancer("click", event);
-      console.log(`idb ui click ${Math.round(pressEvent.x)} ${Math.round(pressEvent.y)}`
+      console.log(`idb ui tap ${Math.round(pressEvent.x)} ${Math.round(pressEvent.y)}`
       )
       clickRef.style.left = `${event.clientX}px`;
       clickRef.style.top = `${event.clientY}px`;
